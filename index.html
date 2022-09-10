@@ -1,0 +1,79 @@
+<!-- comment -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>amsikking: Microscope objectives</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <script src="javascript/python-highlighting/prism.js"></script>
+    <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+</head>
+
+<body>
+<section>
+	<a href="https://amsikking.github.io/">Home page</a>
+	<h1>amsikking: Microscope objectives</h1>
+	<a href="https://github.com/amsikking/gaussian_beam">GitHub repository</a>
+	<h2>Contents</h2>
+	
+	<ul>
+	<li><a href="./numerical_aperture.html">Numerical aperture</a></li>
+	<li><a href="./working_distance.html">Working distance</a></li>
+	<li><a href="./immersion.html">Immersion</a></li>
+	<li><a href="./infinity_correction.html">Infinity correction</a></li>
+	<li><a href="./collection.html">Collection</a></li>
+	<li><a href="./transmission.html">Transmission</a></li>
+	<li><a href="./color_correction.html">Color correction</a></li>
+	<li><a href="./plan_correction.html">Plan correction</a></li>
+	<li><a href="./tube_lens.html">Tube lens</a></li>
+	<li><a href="./magnification.html">Magnification</a></li>
+	<li><a href="./field_of_view.html">Field of view</a></li>
+	<li><a href="./focal_length.html">Focal length</a></li>
+	<li><a href="./band_limit.html">Band limit</a></li>
+	<li><a href="./point_spread_function.html">Point spread function</a></li>
+	<li><a href="./optical_pixels.html">Optical pixels</a></li>
+	<li><a href="./mechanics.html">Mechanics</a></li>
+	<li><a href="./back_focal_plane.html">Back focal plane</a></li>
+	</ul>
+
+	<h2>Description</h2>
+	<p>
+	An introduction to <em>'infinity'</em> corrected microscope objectives. 
+	These lenses are some of the most sophisticated and expensive 'stock' optics 
+	around, and they make excellent building blocks for complex systems. However,
+	the specifics of the design and performance is usually unavailable. There are,
+	however, some general properties and characteristics we can infer and use for
+	instrument design.
+	</p>
+	<ul>
+	<li>To quickly see the basic properties of a particular objective lens simply edit
+	and	run this Python script:
+	<a href="./objective_lens_properties.py">objective_lens_properties.py</a></li>
+	</ul>
+
+	<figure>
+    <img src="figures/objective.png" alt="objective.png">
+    <figcaption>
+	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
+	</figcaption>
+	</figure>
+	
+	<p>
+	<strong>Note:</strong> not all objectives are <em>fully</em> infinity corrected.
+	According to <a class="citation" href="https://doi.org/10.1515/aot-2019-0002" 
+	title="Systematic design of microscope objectives. Part I: System review and analysis; Y. Zhang; 
+	p326, (2019)">Zhang 2019</a>
+	this limits the large manufacturers to Nikon and Olympus (Japanese), since 
+	Zeiss and Leica (German) correct lateral color with the tube lens. The status
+	of Mitutoyo is unclear, since they are Japanese it is <em>assumed</em> they 
+	adhere to full correction in the objective, although this should be verified 
+	for sensitive applications.
+	</p>
+
+</section>
+</body>
+</html>

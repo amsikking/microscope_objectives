@@ -1,0 +1,61 @@
+<!-- comment -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Microscope objectives: Numerical aperture</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <script src="javascript/python-highlighting/prism.js"></script>
+    <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+</head>
+
+<body>
+<section>
+	<a href="https://amsikking.github.io/">Home page</a>
+	<h1>amsikking: Microscope objectives</h1>
+	<a href="./index.html">Index</a>
+
+	<h2>Numerical aperture</h2>
+	<p>
+	The numerical aperture \(NA\) is usually provided by the manufacturer:
+	
+	\[ NA = n \sin\theta \tag{1}\]
+	
+	where \(n\) is the refractive index of the object and \(\theta\) is the 
+	collection half angle 
+	(<a class="citation" href="https://www.pearson.com/en-us/subject-catalog/p/Hecht-Optics-5th-Edition/P200000006793/9780137526420" 
+	title="Optics, 5th edition; E. Hecht; 
+	p220, ISBN-13: 9780133977226, ISBN-13: 9780137526420 (eBook),
+	(2016)">Hecht 2016</a>). The \(NA\) is often used to calculate other properties 
+	of an objective, but this should should be done with caution:
+	</p>
+	
+	<ul>
+	<li>The objective should, at minimum, <em>collect</em> at the specified \(NA\)
+	on the <em>optic axis</em> (or to within a tolerance of a few %). However, it may 
+	not image stigmatically at this \(NA\) and so the <em>effective</em> angular 
+	collection for a given property of the lens (e.g. resolution) may be lower.</li>
+	<li>The <em>off axis</em> \(NA\) may be further reduced, not only from the limits
+	of the optical design, but by purposeful <em>vignetting</em> from a physical stop 
+	or aperture, which directly removes the aberrated light that is often most 
+	pronounced at the highest angles and away from the optic axis.</li>
+	<li>Whilst the <em>design</em> may indeed show (via simulation) that a perfectly
+	made lens would deliver a certain \(NA\). Real world manufacturing and 
+	tolerancing may further limit or reduce the final angular range that gives
+	diffraction limited imaging.</li>
+	</ul>
+
+	<figure>
+    <img src="figures/objective_numerical_aperture.png" alt="objective_numerical_aperture.png">
+    <figcaption>
+	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
+	</figcaption>
+	</figure>
+
+</section>
+</body>
+</html>

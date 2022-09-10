@@ -1,0 +1,61 @@
+<!-- comment -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Microscope objectives: Immersion</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <script src="javascript/python-highlighting/prism.js"></script>
+    <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+</head>
+
+<body>
+<section>
+	<a href="https://amsikking.github.io/">Home page</a>
+	<h1>amsikking: Microscope objectives</h1>
+	<a href="./index.html">Index</a>
+
+	<h2>Immersion</h2>
+	<p>
+	The space between the front of an objective and the image plane
+	is an important part of the system, where the shape and 
+	refractive index matter. So objectives are designed to account 
+	for this space, and 'expect' an <em>immersion</em> medium of 
+	known refractive index \(n_i\) (and sometimes a coverslip of 
+	very particular specification). Filling the space with a 
+	substantially different refractive index (or coverslip) causes 
+	spherical aberration and produces blurry images at high 
+	numerical aperture
+	(<a class="citation" href="https://doi.org/10.1007/978-0-387-45524-2" 
+	title="Handbook of Biological Confocal Microscopy, third edition;
+	J. Pawley; p157 , Springer US, ISBN 978-0-387-25921-5, 
+	eBook ISBN 978-0-387-45524-2, (2006)">Pawley 2006</a>).
+	</p>
+	<p>
+	When imaging a sample of refractive index \(n_s\) beyond the 
+	depth 'zero' image plane (i.e. focusing into the sample at some
+	finite depth), slabs of immersion (with the correct refractive 
+	index) are effectively exchanged for slabs of sample. 
+	If the sample and immersion are <em>refractive index matched</em> 
+	then this is a 'null' operation and the objective will image as 
+	designed. However, if the sample and immersion refractive index
+	are substantially different, then the images get blurrier with
+	depth. So, in general, we require the condition:
+	
+	\[n_i = n_s \tag{1}\]
+	</p>
+	
+	<figure>
+    <img src="figures/immersion.png" alt="immersion.png">
+    <figcaption>
+	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
+	</figcaption>
+	</figure>
+
+</section>
+</body>
+</html>

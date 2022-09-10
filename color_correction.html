@@ -1,0 +1,60 @@
+<!-- comment -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Microscope objectives: Color correction</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <script src="javascript/python-highlighting/prism.js"></script>
+    <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+</head>
+
+<body>
+<section>
+	<a href="https://amsikking.github.io/">Home page</a>
+	<h1>amsikking: Microscope objectives</h1>
+	<a href="./index.html">Index</a>
+
+	<h2>Color correction</h2>
+	<p>
+	An ideal objective would image all <em>wavelengths</em> to the same point,
+	and therefore be fully 'color' corrected. In practice the lens design has to
+	battle the dispersive properties of the many glass elements that typically
+	make up the objective, giving good performance only over a limited range. 
+	From <a class="citation" href="https://doi.org/10.1515/aot-2019-0002" 
+	title="Systematic design of microscope objectives. Part I: System review and analysis; Y. Zhang; 
+	p326, (2019)">Zhang 2019</a>, the degree of color correction has 
+	historically been <em>approximately</em> classified according to the 
+	following table, which refers to the <em>traditional depth of field</em>:
+
+	\[ DOF = \frac{n\lambda}{NA^2} \tag{1}\]
+	
+	where \(\lambda\) is the <em>central</em> wavelength. In the table and 
+	diagram below, \(C\) refers to the longitudinal chromatic abberation.
+	</p>
+
+<table style="text-align:center">
+  <tr><th>Correction</th>				<th>With plan</th>	<th>Colors</th>				<th>Wavelength (nm)</th><th>C</th></tr>
+  <tr><td>Achromate</td>				<td>Plan-Ach</td>  	<td>2: RB</td>				<td>486 - 656</td> 		<td>&lt; 2.0xDOF</td></tr>
+  <tr><td>Fluorite</td>					<td>Plan-Fluor</td> <td>3: RGB</td>				<td>436 - 656</td>		<td>&lt; 2.5xDOF</td></tr>
+  <tr><td>Apochromate</td>				<td>Plan-Apo</td> 	<td>3: RGB</td>				<td>436 - 656</td>		<td>&lt; 1.0xDOF</td></tr>
+  <tr><td>VIS Apochromate</td>			<td></td> 			<td>&GreaterEqual; 3</td>	<td>404 - 768/852</td>	<td></td></tr>
+  <tr><td>IR SuperApochromate</td>		<td></td> 			<td>&GreaterEqual; 3</td>	<td>404 - 1014</td>		<td></td></tr>
+  <tr><td>UV Superapochromate</td>		<td></td> 			<td>&GreaterEqual; 3</td>	<td>365 - 656</td>		<td></td></tr>
+  <tr><td>UV-IR Superapochromate</td>	<td></td> 			<td>&GreaterEqual; 3</td>	<td>365 - 852/1014</td>	<td></td></tr>
+</table>
+
+	<figure>
+    <img src="figures/objective_color_correction.png" alt="objective_color_correction.png">
+    <figcaption>
+	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
+	</figcaption>
+	</figure>
+	
+</section>
+</body>
+</html>

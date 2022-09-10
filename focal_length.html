@@ -1,0 +1,61 @@
+<!-- comment -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Microscope objectives: Focal length</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <script src="javascript/python-highlighting/prism.js"></script>
+    <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+</head>
+
+<body>
+<section>
+	<a href="https://amsikking.github.io/">Home page</a>
+	<h1>amsikking: Microscope objectives</h1>
+	<a href="./index.html">Index</a>
+
+	<h2>Focal length</h2>
+	<p>
+	From <a class="citation" href="https://www.pearson.com/en-us/subject-catalog/p/Hecht-Optics-5th-Edition/P200000006793/9780137526420" 
+	title="Optics, 5th edition; E. Hecht; 
+	p164, ISBN-13: 9780133977226, ISBN-13: 9780137526420 (eBook),
+	(2016)">Hecht 2016</a>, in general the transverse magnification \(M_T\) is given 
+	by the ratio of the object and image distances (\(s_o\) and \(s_i\)) according
+	to:
+	
+	\[ M_T = - \frac{s_i}{s_o} \tag{1}\]
+	
+	In the special case of an infinity corrected objective and tube lens pair, the 
+	object and image distances are equal to their focal lengths (\(f_{obj}\) and 
+	\(f_{tl}\)). So we can rewrite (1) in the more convenient form:
+	
+	\[ M_T = - \frac{f_{tl}}{f_{obj}} \tag{2}\]
+	
+	In (1) and (2) the negative sign is by convention, and just like the traditional
+	equation for transverse magnification (\(M_T = - \frac{y_i}{y_o}\)) indicates 
+	an inverted image. We can therefore infer the focal length of the objective by
+	rewriting (2) in the form:
+	
+	\[ f_{obj} = \frac{f_{tl}}{\vert M_T \vert} \tag{3}\]
+	
+	<strong>Note:</strong> the <em>focal length</em> (unlike the magnification) is a 
+	<strong>fundamental property</strong> of the objective. The magnification can now
+	be adjusted by choosing tube lenses with different focal lengths (a useful degree
+	of freedom for building instruments).
+	</p>
+	
+	<figure>
+    <img src="figures/focal_length.png" alt="focal_length.png">
+    <figcaption>
+	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
+	</figcaption>
+	</figure>
+	
+</section>
+</body>
+</html>

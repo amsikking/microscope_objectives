@@ -1,0 +1,54 @@
+<!-- comment -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Microscope objectives: Magnification</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <script src="javascript/python-highlighting/prism.js"></script>
+    <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+</head>
+
+<body>
+<section>
+	<a href="https://amsikking.github.io/">Home page</a>
+	<h1>amsikking: Microscope objectives</h1>
+	<a href="./index.html">Index</a>
+
+	<h2>Magnification</h2>
+	<p>
+	The <em>transverse</em> magnification (\(M_T\)) is the most familiar 
+	specification for an objective that is usually provided by the manufacturer. 
+	However, this is slightly confusing, since an infinity corrected objective has 
+	no image (without an additional lens). It is therefore implicity assumed that 
+	the user of an objective will use the <em>manufacturer tube lens</em>, at which 
+	point the object is magnified by:
+	
+	\[ M_T = - \frac{y_i}{y_o} \tag{1}\]
+	
+	where the negative sign is by convention and indicates and <em>inverted</em> 
+	image (<a class="citation" href="https://www.pearson.com/en-us/subject-catalog/p/Hecht-Optics-5th-Edition/P200000006793/9780137526420" 
+	title="Optics, 5th edition; E. Hecht; 
+	p164-165, ISBN-13: 9780133977226, ISBN-13: 9780137526420 (eBook),
+	(2016)">Hecht 2016</a>).
+	Ignoring the sign convention we can rewrite (1) in the form most familiar
+	to microscope users:
+	
+	\[ Image = M_T \; Object \tag{2}\]
+	
+	</p>
+	
+	<figure>
+    <img src="figures/magnification.png" alt="magnification.png">
+    <figcaption>
+	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
+	</figcaption>
+	</figure>
+	
+</section>
+</body>
+</html>

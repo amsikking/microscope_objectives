@@ -1,0 +1,74 @@
+<!-- comment -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Microscope objectives: Optical pixels</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <script src="javascript/python-highlighting/prism.js"></script>
+    <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+</head>
+
+<body>
+<section>
+	<a href="https://amsikking.github.io/">Home page</a>
+	<h1>amsikking: Microscope objectives</h1>
+	<a href="./index.html">Index</a>
+
+	<h2>Optical pixels</h2>
+	<p>
+	According to the <em>Nyquist criterion</em>
+	(<a class="citation" href="https://doi.org/10.1007/978-0-387-45524-2" 
+	title="Handbook of Biological Confocal Microscopy, third edition;
+	J. Pawley; p64 , Springer US, ISBN 978-0-387-25921-5, 
+	eBook ISBN 978-0-387-45524-2, (2006)">Pawley 2006</a>), the interval
+	between intensity measurements (the pixel size) should be less than or 
+	equal to half the smallest feature size:
+	
+	\[ r_{px} \leq \frac{1}{2} r_{min} \tag{1}\]
+	
+	and,
+	
+	\[ z_{px} \leq \frac{1}{2} z_{min} \tag{2}\]
+	
+	If the smallest features are sub-diffractive, then (in a traditional
+	imaging regime) we can use the expected size of the diffraction 
+	limited point spread function to determine the correct pixel size:
+	
+	\[ r_{px} \leq \frac{1}{2} \frac{0.61 \lambda_0}{NA} \tag{3}\]
+	
+	and,
+	
+	\[ z_{px} \leq \frac{n \lambda_0}{NA^2} \tag{4}\]
+	
+	In this case, the <em>voxel aspect ratio</em> scales with the 
+	collection half angle according to:
+	
+	\[ \frac{z_{px}}{r_{px}} = \frac{3.28}{\sin\theta} \tag{5}\]
+	
+	For most objectives \( 0.1 \leq \sin\theta \leq 0.95 \), 
+	and so in this regime the axial pixels are significantly 
+	<em>longer</em> than the radial pixels:
+	
+	\[ 3.5 \leq \frac{z_{px}}{r_{px}} \leq 32.8 \]
+
+	When considering optics and camera chips it is often useful to 
+	calculate the number of pixels in the field of view:
+	
+	\[ N_{px} = \frac{FOV}{r_{px}} \tag{6}\]
+	</p>
+
+	<figure>
+    <img src="figures/optical_pixels.png" alt="optical_pixels.png">
+    <figcaption>
+	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
+	</figcaption>
+	</figure>
+
+</section>
+</body>
+</html>

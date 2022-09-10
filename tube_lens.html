@@ -1,0 +1,60 @@
+<!-- comment -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Microscope objectives: Tube lens</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
+    <script src="javascript/python-highlighting/prism.js"></script>
+    <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src="javascript/update_figures.js"></script>
+    <script src="javascript/reference_list/reference_list.js"></script>
+</head>
+
+<body>
+<section>
+	<a href="https://amsikking.github.io/">Home page</a>
+	<h1>amsikking: Microscope objectives</h1>
+	<a href="./index.html">Index</a>
+
+	<h2>Tube Lens</h2>
+	<p>
+	An infinity corrected objective needs an extra lens to form a finite image,
+	often referred to as a 'tube lens'. In principle, any positive lens will work.
+	However, in practice some care should be taken to ensure that the chosen 
+	tube lens can accommodate the pupil size (\(D_{BFP}\)) and the field of view
+	(\(FOV\)) that the objective delivers (as well as the wavelength range and
+	any final aberration corrections that may required). A useful reference is 
+	the manufacturer recommended tube lens, summarised below for the most 
+	popular manufacturers:
+	</p>
+
+<table style="text-align:center">
+  <tr><th>Make</th>		<th>Part #</th>	  	<th>f (mm)</th>	<th>FN (mm)</th><th>EPD (mm)</th> <th>Lambda (nm)</th> <th>Inf. correction</th></tr>
+  <tr><td>Leica</td>	<td>?</td>  		<td>200</td>	<td></td>       <td></td>	   <td></td>			<td>Partial</td></tr>
+  <tr><td>Mitutoyo</td>	<td>MT-1</td>  		<td>200</td>	<td>30</td>     <td>24</td>	   <td>436 - 656</td>	<td>?</td>      </tr>
+  <tr><td>Nikon</td>	<td>MXA20696</td>  	<td>200</td>	<td>26.5</td> 	<td>32</td>	   <td>400 - 700</td>	<td>Full</td>	</tr>
+  <tr><td>Olympus</td>	<td>SWTLU-C</td> 	<td>180</td>	<td>26.5</td> 	<td>36</td>	   <td>400 - 700</td>	<td>Full</td>	</tr>
+  <tr><td>Zeiss</td>	<td>?</td> 			<td>165</td>	<td></td> 	 	<td></td>	   <td></td>			<td>Partial</td>	</tr>
+</table>
+	
+	<p>
+	Here the <em>field number</em> (\(FN\)) is (in theory!) the field of view over 
+	which the tube lens (and maybe the objective!) can deliver diffraction limited 
+	performance for a small enough pupil (\(D_{BFP}\)). Note that the entrance pupil 
+	diameter (\(EPD\)) may cause vignetting (or the tube lens aberrations) for large 
+	enough pupils.
+	</p>
+	
+	<figure>
+    <img src="figures/objective_tube_lens.png" alt="objective_tube_lens.png">
+    <figcaption>
+	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
+	</figcaption>
+	</figure>
+	
+</section>
+</body>
+</html>
