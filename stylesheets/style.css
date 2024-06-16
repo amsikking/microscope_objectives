@@ -82,7 +82,7 @@ body > header {
   background: var(--accent-bg);
   border-bottom: 1px solid var(--border);
   text-align: center;
-  padding: 0 0.5rem 2rem 0.5rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
   grid-column: 1 / -1;
 }
 
@@ -98,7 +98,7 @@ body > header p {
 
 /* Add a little padding to ensure spacing is correct between content and header > nav */
 main {
-  padding-top: 1.5rem;
+  padding-top: 0.5rem;
 }
 
 body > footer {
@@ -112,7 +112,7 @@ body > footer {
 
 /* Format headers */
 h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 h2 {
@@ -152,19 +152,19 @@ h3 {
 /* Reduce header size on mobile */
 @media only screen and (max-width: 720px) {
   h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 2.1rem;
-  }
-
-  h3 {
     font-size: 1.75rem;
   }
 
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.17rem;
+  }
+
   h4 {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 
@@ -252,7 +252,7 @@ header > nav ol {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -330,8 +330,8 @@ section h2:first-child {
 section {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 2rem 1rem;
-  margin: 3rem 0;
+  padding: 1rem 1rem;
+  margin: 2rem 0;
 }
 
 summary {
@@ -529,8 +529,13 @@ blockquote {
   font-style: italic;
 }
 
+sup {
+	vertical-align: top;
+}
+
 cite {
-  font-size: 0.9rem;
+  vertical-align: super;
+  font-size: 0.7rem;
   color: var(--text-light);
   font-style: normal;
 }
@@ -598,4 +603,41 @@ progress::-moz-progress-bar {
 
 progress:indeterminate::-moz-progress-bar {
   background-color: var(--accent-bg);
+}
+
+.flexbox {
+  display: flex;
+}
+
+.flexboxc1 {
+  flex: 1;
+  margin: 1rem;
+  /* background-color: blue; */
+}
+
+.flexboxc2 {
+  flex: 2;
+  margin: 1rem;
+  /* background-color: red; */
+}
+
+.flexboxc3 {
+  flex: 3;
+  margin: 1rem;
+  /* background-color: red; */
+}
+
+@media screen {
+   .hideonscreen {
+       display: none;
+   }
+}
+
+@media print {
+    .pagebreak {
+	page-break-after: always;
+	}
+   .hideonprint {
+       display: none;
+   }
 }
