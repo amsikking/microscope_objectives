@@ -2,47 +2,57 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+  <head>
 	<meta charset="utf-8">
-	<title>Microscope objectives: Field of view</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/prism.css">
     <script src="javascript/python-highlighting/prism.js"></script>
     <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
     <script src="javascript/update_figures.js"></script>
     <script src="javascript/reference_list/reference_list.js"></script>
-</head>
+	<title>amsikking: Field of view</title>
+  </head>
 
-<body>
-<section>
-	<a href="https://amsikking.github.io/">Home page</a>
-	<h1>amsikking: Microscope objectives</h1>
-	<a href="./index.html">Index</a>
+  <body>
+  	<header>
+	  <nav>
+	    <ul>
+		  <li><h1 style="margin-top: 0rem; margin-left: 1rem; margin-right: 1rem">amsikking:</h1></li>
+		  <li><a href="https://amsikking.github.io/">Home page</a></li>
+		  <li><a href="https://github.com/amsikking/microscope_objectives">GitHub</a></li>
+	    </ul>
+	  </nav>
+	</header>
 
-	<h2>Field of view</h2>
-	<p>
-	The field of view (\(FOV\)) of an objective is rarely specified, perhaps because
-	the definition is not standardised. For example, one could say that the \(FOV\) 
-	is the range over which the image is diffraction limited at the maximum \(NA\) 
-	(a stringent definition giving the smallest fields, but arguably the most correct
-	choice). Alternatively one could accept the field over which stigmatic imaging 
-	is maintained for some fraction of the maximum \(NA\) (for example 80%). In 
-	reality, without full design information for the objective and tube lens, 
-	<strong>we simply don't know the field of view</strong>. It is common 
-	to <em>estimate</em> the \(FOV\) using the tube lens field number \(FN\) and 
-	objective magnification \(M_T\):
-	
-	\[ FOV \sim \frac{FN}{M_T} \tag{1}\]
-	
-	</p>
-	
-	<figure>
-    <img src="figures/field_of_view.png" alt="field_of_view.png">
-    <figcaption>
-	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
-	</figcaption>
-	</figure>
-	
-</section>
-</body>
+	<main>
+	  <h1>Microscope objectives</h1>
+	  <p>An introduction to 'infinity' corrected microscope objectives.</p>
+	  <a href="./index.html">Contents</a>
+	  <section>
+		<h2>Field of view</h2>
+		<p>
+		The field of view (\(FOV\)) of an objective is rarely specified, perhaps because
+		the definition is not standardised. For example, one could say that the \(FOV\) 
+		is the range over which the image is diffraction limited at the maximum \(NA\) 
+		(a stringent definition giving the smallest fields, but arguably the most correct
+		choice). Alternatively one could accept the field over which stigmatic imaging 
+		is maintained for some fraction of the maximum \(NA\) (for example 80%). In 
+		reality, without full design information for the objective and tube lens, 
+		<strong>we simply don't know the field of view</strong>. It is common 
+		to <em>estimate</em> the \(FOV\) using the tube lens field number \(FN\) and 
+		objective magnification \(M_T\):
+		
+		\[ FOV \sim \frac{FN}{M_T} \tag{1}\]
+		</p>
+		
+		<figure>
+		  <img src="figures/field_of_view.png" alt="field_of_view.png">
+		  <figcaption>
+		  (<a href="figures/objective_sketches.odp">.odp sketch</a>)
+		  </figcaption>
+		</figure>
+	  </section>
+	</main>
+  </body>
 </html>

@@ -2,53 +2,64 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+  <head>
 	<meta charset="utf-8">
-	<title>Microscope objectives: Back focal plane</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/prism.css">
     <script src="javascript/python-highlighting/prism.js"></script>
     <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
     <script src="javascript/update_figures.js"></script>
     <script src="javascript/reference_list/reference_list.js"></script>
-</head>
+	<title>amsikking: Back focal plane</title>
+  </head>
 
-<body>
-<section>
-	<a href="https://amsikking.github.io/">Home page</a>
-	<h1>amsikking: Microscope objectives</h1>
-	<a href="./index.html">Index</a>
+  <body>
+  	<header>
+	  <nav>
+	    <ul>
+		  <li><h1 style="margin-top: 0rem; margin-left: 1rem; margin-right: 1rem">amsikking:</h1></li>
+		  <li><a href="https://amsikking.github.io/">Home page</a></li>
+		  <li><a href="https://github.com/amsikking/microscope_objectives">GitHub</a></li>
+	    </ul>
+	  </nav>
+	</header>
 
-	<h2>Back focal plane</h2>
-	<p>
-	The back focal plane (BFP) is an important design and build parameter 
-	that may affect, for example, the kind of tube lens that is used with 
-	the objective to form a finite image. It is also common to image the 
-	BFP onto other optics like scanning mirrors or adaptive optics etc, and
-	so knowing the size of the BFP may be important. Fortunately, we know 
-	from the infinity correction, that the BFP diameter (\(D_{BFP}\)) 
-	scales with the focal length and numerical aperture of the objective 
-	according to:
-	
-	\[ D_{BFP} = 2 f NA \tag{1}\]
-	
-	However it may also be useful to know the <em>location</em> of the BFP
-	for mechanical and alignment considerations, for example how far the BFP
-	is from the objective flange. Not all manufacturers provide this 
-	information, so it may be down to the builder to find out for themselves.
-	In practice the BFP is often located <em>inside</em> the objective, i.e.
-	a focusing laser beam into the rear of the objective will produce an 
-	output of minimal divergence when the focus is some distance past the 
-	flange. Sometimes the only way to find out is to do this test and measure!
-	</p>
-	
-	<figure>
-    <img src="figures/back_focal_plane.png" alt="back_focal_plane.png">
-    <figcaption>
-	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
-	</figcaption>
-	</figure>
-	
-</section>
-</body>
+	<main>
+	  <h1>Microscope objectives</h1>
+	  <p>An introduction to 'infinity' corrected microscope objectives.</p>
+	  <a href="./index.html">Contents</a>
+	  <section>
+		<h2>Back focal plane</h2>
+		<p>
+		The back focal plane (BFP) is an important design and build parameter 
+		that may affect, for example, the kind of tube lens that is used with 
+		the objective to form a finite image. It is also common to image the 
+		BFP onto other optics like scanning mirrors or adaptive optics etc, and
+		so knowing the size of the BFP may be important. Fortunately, we know 
+		from the infinity correction, that the BFP diameter (\(D_{BFP}\)) 
+		scales with the focal length and numerical aperture of the objective 
+		according to:
+		
+		\[ D_{BFP} = 2 f NA \tag{1}\]
+		
+		However it may also be useful to know the <em>location</em> of the BFP
+		for mechanical and alignment considerations, for example how far the BFP
+		is from the objective flange. Not all manufacturers provide this 
+		information, so it may be down to the builder to find out for themselves.
+		In practice the BFP is often located <em>inside</em> the objective, i.e.
+		a focusing laser beam into the rear of the objective will produce an 
+		output of minimal divergence when the focus is some distance past the 
+		flange. Sometimes the only way to find out is to do this test and measure!
+		</p>
+		
+		<figure>
+		  <img src="figures/back_focal_plane.png" alt="back_focal_plane.png">
+		  <figcaption>
+		  (<a href="figures/objective_sketches.odp">.odp sketch</a>)
+		  </figcaption>
+		</figure>
+	  </section>
+	</main>
+  </body>
 </html>

@@ -2,60 +2,70 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+  <head>
 	<meta charset="utf-8">
-	<title>Microscope objectives: Working distance</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/prism.css">
     <script src="javascript/python-highlighting/prism.js"></script>
     <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
     <script src="javascript/update_figures.js"></script>
     <script src="javascript/reference_list/reference_list.js"></script>
-</head>
+	<title>amsikking: Working distance</title>
+  </head>
 
-<body>
-<section>
-	<a href="https://amsikking.github.io/">Home page</a>
-	<h1>amsikking: Microscope objectives</h1>
-	<a href="./index.html">Index</a>
+  <body>
+  	<header>
+	  <nav>
+	    <ul>
+		  <li><h1 style="margin-top: 0rem; margin-left: 1rem; margin-right: 1rem">amsikking:</h1></li>
+		  <li><a href="https://amsikking.github.io/">Home page</a></li>
+		  <li><a href="https://github.com/amsikking/microscope_objectives">GitHub</a></li>
+	    </ul>
+	  </nav>
+	</header>
 
-	<h2>Working distance</h2>
-	<p>
-	The working distance (w.d.)	is the range over which an objective
-	can be moved towards the infinity corrected image plane before it 
-	mechanically collides with the sample
-	(<a class="citation" href="https://doi.org/10.1007/978-0-387-45524-2" 
-	title="Handbook of Biological Confocal Microscopy, third edition;
-	J. Pawley; p157 , Springer US, ISBN 978-0-387-25921-5, 
-	eBook ISBN 978-0-387-45524-2, (2006)">Pawley 2006</a>). So 
-	importantly it is the <em>maximum depth of standard focus</em> 
-	(where the objective is moved towards the sample or vice
-	versa). For a typical air objective this can simply be the 
-	distance from the front surface of the objective to the image
-	plane:
-	</p>
-	
-	<figure>
-    <img src="figures/working_distance.png" alt="working_distance.png">
-    <figcaption>
-	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
-	</figcaption>
-	</figure>
-	
-	<p>
-	For a <em>coverslip</em> corrected objective it is the 
-	distance to the coverslip when the image plane is 
-	<em>immediately above</em> the coverslip:
-	</p>
+	<main>
+	  <h1>Microscope objectives</h1>
+	  <p>An introduction to 'infinity' corrected microscope objectives.</p>
+	  <a href="./index.html">Contents</a>
+	  <section>
+		<h2>Working distance</h2>
+		<p>
+		The working distance (w.d.)	is the range over which an objective
+		can be moved towards the infinity corrected image plane before it 
+		mechanically collides with the sample
+		(<a class="citation" href="https://doi.org/10.1007/978-0-387-45524-2" 
+		title="Handbook of Biological Confocal Microscopy, third edition;
+		J. Pawley; p157 , Springer US, ISBN 978-0-387-25921-5, 
+		eBook ISBN 978-0-387-45524-2, (2006)">Pawley 2006</a>). So 
+		importantly it is the <em>maximum depth of standard focus</em> 
+		(where the objective is moved towards the sample or vice
+		versa). For a typical air objective this can simply be the 
+		distance from the front surface of the objective to the image
+		plane:
+		</p>
 		
-	<figure>
-    <img src="figures/working_distance_coverslip.png" 
-	alt="working_distance_coverslip.png">
-    <figcaption>
-	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
-	</figcaption>
-	</figure>
-
-</section>
-</body>
+		<figure>
+		  <img src="figures/working_distance.png" alt="working_distance.png">
+		  <figcaption>
+		  (<a href="figures/objective_sketches.odp">.odp sketch</a>)
+		  </figcaption>
+		</figure>
+		
+		<p>
+		For a <em>coverslip</em> corrected objective it is the 
+		distance to the coverslip when the image plane is 
+		<em>immediately above</em> the coverslip:
+		</p>
+			
+		<figure>
+		  <img src="figures/working_distance_coverslip.png" alt="working_distance_coverslip.png">
+		  <figcaption>
+		  (<a href="figures/objective_sketches.odp">.odp sketch</a>)
+		  </figcaption>
+		</figure>
+	  </section>
+	</main>
+  </body>
 </html>

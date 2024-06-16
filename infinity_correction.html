@@ -2,108 +2,119 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+  <head>
 	<meta charset="utf-8">
-	<title>Microscope objectives: Infinity correction</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/prism.css">
     <script src="javascript/python-highlighting/prism.js"></script>
     <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
     <script src="javascript/update_figures.js"></script>
     <script src="javascript/reference_list/reference_list.js"></script>
-</head>
+	<title>amsikking: Infinity correction</title>
+  </head>
 
-<body>
-<section>
-	<a href="https://amsikking.github.io/">Home page</a>
-	<h1>amsikking: Microscope objectives</h1>
-	<a href="./index.html">Index</a>
+  <body>
+  	<header>
+	  <nav>
+	    <ul>
+		  <li><h1 style="margin-top: 0rem; margin-left: 1rem; margin-right: 1rem">amsikking:</h1></li>
+		  <li><a href="https://amsikking.github.io/">Home page</a></li>
+		  <li><a href="https://github.com/amsikking/microscope_objectives">GitHub</a></li>
+	    </ul>
+	  </nav>
+	</header>
 
-	<h2>Infinity correction</h2>
-	<p>
-	An ideal infinity corrected objective can collect the emission from a point 
-	particle at the specified \(NA\) (i.e. a portion of a <em>spherical</em> wave) 
-	and produce a <em>plane</em> wave at the back aperture. So in other words, an 
-	object plane (P<sub>o</sub> below) is 'sent' to an image plane (P<sub>i</sub> 
-	below) at an infinite distance, which is a key property we can use to 
-	determine how the lens operates (even if we don't know what's inside).
-	</p>
-	<p>
-	From <a class="citation" href="https://www.pearson.com/en-us/subject-catalog/p/Hecht-Optics-5th-Edition/P200000006793/9780137526420" 
-	title="Optics, 5th edition; E. Hecht; 
-	p265-266, ISBN-13: 9780133977226, ISBN-13: 9780137526420 (eBook),
-	(2016)">Hecht 2016</a>, an optical system which images off-axis points (like 
-	p<sub>o1</sub> to p<sub>i1</sub>) at <em>high</em> angular aperture (e.g. 
-	a high \(NA\) microscope objective) must obey the <em>sine condition</em>:
-	
-	\[ y_i n_i \sin\gamma_i = y_o n_o \sin\gamma_o \tag{1}\]
-	
-	where \(y\) is the height of the point from the optic axis, \(\gamma\) is the 
-	angle the marginal ray makes with the optic axis and \(n\) is the refractive 
-	index of the medium (and subscripts 'o' and 'i' are for object and image 
-	space):
-	</p>
-	
-	<figure>
-    <img src="figures/sine_condition.png" alt="sine_condition.png">
-    <figcaption>
-	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
-	</figcaption>
-	</figure>
-	
-	<p>
-	From <a class="citation" href="https://www.cambridge.org/us/academic/subjects/physics/optics-optoelectronics-and-photonics/principles-optics-60th-anniversary-edition-7th-edition?format=HB&isbn=9781108477437" 
-	title="Principles of Optics: 60th Anniversary Edition 7th Edition; M. Born and E. Wolf; 
-	p179-180, ISBN-13: 978-1108477437, ISBN-13: 978-1108477437 (eBook),
-	(2019)">Born 2019</a>, if we now consider a pair of points on the optic axis 
-	(p<sub>o0</sub> and p<sub>i0</sub>), and 'send' the image plane (P<sub>i</sub>) 
-	very far to the left by a distance \(-d_i\) (i.e. towards \(-\infty\)) then 
-	we can see that as the angle gets small \(\sin\gamma_i \to \gamma_i\), and 
-	we can write:
-	
-	\[ \gamma_i = \lim_{d_i\to \infty} \left(\frac{h_i}{-d_i}\right) \tag{2}\]
-	
-	So in the limit of infinity corrected objectives, we can rewrite (1) as:
-	
-	\[ y_i n_i \left(\frac{h_i}{-d_i}\right) = y_o n_o \sin\gamma_o \tag{3}\]
-	
-	From the paraxial solutions to geometrical optics, (now valid on the left
-	since \(\sin\gamma_i \to \gamma_i\)) we can use the relations for the lateral
-	magnification \(M_T\):
-	
-	\[ M_T = \frac{y_i}{y_o} = -\frac{d_i}{f_i} \tag{4}\]
-	
-	Combining (3) and (4) simplifies to:
-	
-	\[ n_i \left(\frac{h_i}{f_i}\right) = n_o \sin\gamma_o \tag{5}\]
-	
-	Since the image is normally formed in air (\(n_i=1\)), we can set
-	\(\gamma_0 = \theta\) and drop the subscripts to write:
-	
-	\[ h = f n \sin\theta \tag{6}\]
+	<main>
+	  <h1>Microscope objectives</h1>
+	  <p>An introduction to 'infinity' corrected microscope objectives.</p>
+	  <a href="./index.html">Contents</a>
+	  <section>
+		<h2>Infinity correction</h2>
+		<p>
+		An ideal infinity corrected objective can collect the emission from a point 
+		particle at the specified \(NA\) (i.e. a portion of a <em>spherical</em> wave) 
+		and produce a <em>plane</em> wave at the back aperture. So in other words, an 
+		object plane (P<sub>o</sub> below) is 'sent' to an image plane (P<sub>i</sub> 
+		below) at an infinite distance, which is a key property we can use to 
+		determine how the lens operates (even if we don't know what's inside).
+		</p>
+		<p>
+		From <a class="citation" href="https://www.pearson.com/en-us/subject-catalog/p/Hecht-Optics-5th-Edition/P200000006793/9780137526420" 
+		title="Optics, 5th edition; E. Hecht; 
+		p265-266, ISBN-13: 9780133977226, ISBN-13: 9780137526420 (eBook),
+		(2016)">Hecht 2016</a>, an optical system which images off-axis points (like 
+		p<sub>o1</sub> to p<sub>i1</sub>) at <em>high</em> angular aperture (e.g. 
+		a high \(NA\) microscope objective) must obey the <em>sine condition</em>:
+		
+		\[ y_i n_i \sin\gamma_i = y_o n_o \sin\gamma_o \tag{1}\]
+		
+		where \(y\) is the height of the point from the optic axis, \(\gamma\) is the 
+		angle the marginal ray makes with the optic axis and \(n\) is the refractive 
+		index of the medium (and subscripts 'o' and 'i' are for object and image 
+		space):
+		</p>
+		
+		<figure>
+		  <img src="figures/sine_condition.png" alt="sine_condition.png">
+		  <figcaption>
+		  (<a href="figures/objective_sketches.odp">.odp sketch</a>)
+		  </figcaption>
+		</figure>
+		
+		<p>
+		From <a class="citation" href="https://www.cambridge.org/us/academic/subjects/physics/optics-optoelectronics-and-photonics/principles-optics-60th-anniversary-edition-7th-edition?format=HB&isbn=9781108477437" 
+		title="Principles of Optics: 60th Anniversary Edition 7th Edition; M. Born and E. Wolf; 
+		p179-180, ISBN-13: 978-1108477437, ISBN-13: 978-1108477437 (eBook),
+		(2019)">Born 2019</a>, if we now consider a pair of points on the optic axis 
+		(p<sub>o0</sub> and p<sub>i0</sub>), and 'send' the image plane (P<sub>i</sub>) 
+		very far to the left by a distance \(-d_i\) (i.e. towards \(-\infty\)) then 
+		we can see that as the angle gets small \(\sin\gamma_i \to \gamma_i\), and 
+		we can write:
+		
+		\[ \gamma_i = \lim_{d_i\to \infty} \left(\frac{h_i}{-d_i}\right) \tag{2}\]
+		
+		So in the limit of infinity corrected objectives, we can rewrite (1) as:
+		
+		\[ y_i n_i \left(\frac{h_i}{-d_i}\right) = y_o n_o \sin\gamma_o \tag{3}\]
+		
+		From the paraxial solutions to geometrical optics, (now valid on the left
+		since \(\sin\gamma_i \to \gamma_i\)) we can use the relations for the lateral
+		magnification \(M_T\):
+		
+		\[ M_T = \frac{y_i}{y_o} = -\frac{d_i}{f_i} \tag{4}\]
+		
+		Combining (3) and (4) simplifies to:
+		
+		\[ n_i \left(\frac{h_i}{f_i}\right) = n_o \sin\gamma_o \tag{5}\]
+		
+		Since the image is normally formed in air (\(n_i=1\)), we can set
+		\(\gamma_0 = \theta\) and drop the subscripts to write:
+		
+		\[ h = f n \sin\theta \tag{6}\]
 
-	which produces the familiar equation for the diameter of the back focal 
-	plane \(D_{BFP}\)
-	(<a class="citation" href="https://onlinelibrary.wiley.com/doi/book/10.1002/9783527699247" 
-	title="Handbook of Optical Systems: Volume 4: Survey of Optical Instruments; H. Gross; 
-	p547, Print ISBN:9783527403806, Online ISBN:9783527699247,
-	(2008)">Gross 2008</a>):
-	
-	\[ D_{BFP} = 2 f NA \tag{7}\]
-	
-	<strong>Note:</strong> equation (6) has important implications for how we 
-	<em>use</em> an infinity corrected objective. The 'rays' from the object 
-	map to the exit pupil according to \(\sin\theta\), so the pupil is not a 
-	plane, but a <strong>spherical cap</strong>:
-	</p>
-	
-	<figure>
-    <img src="figures/infinity_correction.png" alt="infinity_correction.png">
-    <figcaption>
-	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
-	</figcaption>
-	</figure>
-	
-</section>
-</body>
+		which produces the familiar equation for the diameter of the back focal 
+		plane \(D_{BFP}\)
+		(<a class="citation" href="https://onlinelibrary.wiley.com/doi/book/10.1002/9783527699247" 
+		title="Handbook of Optical Systems: Volume 4: Survey of Optical Instruments; H. Gross; 
+		p547, Print ISBN:9783527403806, Online ISBN:9783527699247,
+		(2008)">Gross 2008</a>):
+		
+		\[ D_{BFP} = 2 f NA \tag{7}\]
+		
+		<strong>Note:</strong> equation (6) has important implications for how we 
+		<em>use</em> an infinity corrected objective. The 'rays' from the object 
+		map to the exit pupil according to \(\sin\theta\), so the pupil is not a 
+		plane, but a <strong>spherical cap</strong>:
+		</p>
+		
+		<figure>
+		  <img src="figures/infinity_correction.png" alt="infinity_correction.png">
+		  <figcaption>
+		  (<a href="figures/objective_sketches.odp">.odp sketch</a>)
+		  </figcaption>
+		</figure>
+	  </section>
+	</main>
+  </body>
 </html>

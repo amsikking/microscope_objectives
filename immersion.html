@@ -2,90 +2,101 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+  <head>
 	<meta charset="utf-8">
-	<title>Microscope objectives: Immersion</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/prism.css">
     <script src="javascript/python-highlighting/prism.js"></script>
     <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
     <script src="javascript/update_figures.js"></script>
     <script src="javascript/reference_list/reference_list.js"></script>
-</head>
+	<title>amsikking: Immersion</title>
+  </head>
 
-<body>
-<section>
-	<a href="https://amsikking.github.io/">Home page</a>
-	<h1>amsikking: Microscope objectives</h1>
-	<a href="./index.html">Index</a>
+  <body>
+  	<header>
+	  <nav>
+	    <ul>
+		  <li><h1 style="margin-top: 0rem; margin-left: 1rem; margin-right: 1rem">amsikking:</h1></li>
+		  <li><a href="https://amsikking.github.io/">Home page</a></li>
+		  <li><a href="https://github.com/amsikking/microscope_objectives">GitHub</a></li>
+	    </ul>
+	  </nav>
+	</header>
 
-	<h2>Immersion</h2>
-	<p>
-	The space between the front of an objective and the image plane
-	is an important part of the system, where the shape and 
-	refractive index matter. So objectives are designed to account 
-	for this space, and 'expect' an <em>immersion</em> medium of 
-	known refractive index \(n_i\) (and sometimes a coverslip of 
-	very particular specification). Filling the space with a 
-	substantially different refractive index (or coverslip) causes 
-	spherical aberration and produces blurry images at high 
-	numerical aperture
-	(<a class="citation" href="https://doi.org/10.1007/978-0-387-45524-2" 
-	title="Handbook of Biological Confocal Microscopy, third edition;
-	J. Pawley; p157 , Springer US, ISBN 978-0-387-25921-5, 
-	eBook ISBN 978-0-387-45524-2, (2006)">Pawley 2006</a>).
-	</p>
-	<p>
-	When imaging a sample of refractive index \(n_s\) beyond the 
-	depth 'zero' image plane (i.e. focusing into the sample at some
-	finite depth), slabs of immersion (with the correct refractive 
-	index) are effectively exchanged for slabs of sample. 
-	If the sample and immersion are <em>refractive index matched</em> 
-	then this is a 'null' operation and the objective will image as 
-	designed. However, if the sample and immersion refractive index
-	are substantially different, then the images get blurrier with
-	depth. So, in general, we require the condition:
-	
-	\[n_i = n_s \tag{1}\]
-	</p>
+	<main>
+	  <h1>Microscope objectives</h1>
+	  <p>An introduction to 'infinity' corrected microscope objectives.</p>
+	  <a href="./index.html">Contents</a>
+	  <section>
+		<h2>Immersion</h2>
+		<p>
+		The space between the front of an objective and the image plane
+		is an important part of the system, where the shape and 
+		refractive index matter. So objectives are designed to account 
+		for this space, and 'expect' an <em>immersion</em> medium of 
+		known refractive index \(n_i\) (and sometimes a coverslip of 
+		very particular specification). Filling the space with a 
+		substantially different refractive index (or coverslip) causes 
+		spherical aberration and produces blurry images at high 
+		numerical aperture
+		(<a class="citation" href="https://doi.org/10.1007/978-0-387-45524-2" 
+		title="Handbook of Biological Confocal Microscopy, third edition;
+		J. Pawley; p157 , Springer US, ISBN 978-0-387-25921-5, 
+		eBook ISBN 978-0-387-45524-2, (2006)">Pawley 2006</a>).
+		</p>
+		<p>
+		When imaging a sample of refractive index \(n_s\) beyond the 
+		depth 'zero' image plane (i.e. focusing into the sample at some
+		finite depth), slabs of immersion (with the correct refractive 
+		index) are effectively exchanged for slabs of sample. 
+		If the sample and immersion are <em>refractive index matched</em> 
+		then this is a 'null' operation and the objective will image as 
+		designed. However, if the sample and immersion refractive index
+		are substantially different, then the images get blurrier with
+		depth. So, in general, we require the condition:
+		
+		\[n_i = n_s \tag{1}\]
+		</p>
 
-	<figure>
-    <img src="figures/immersion_index.png" alt="immersion_index.png">
-    <figcaption>
-	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
-	</figcaption>
-	</figure>
+		<figure>
+		  <img src="figures/immersion_index.png" alt="immersion_index.png">
+		  <figcaption>
+		  (<a href="figures/objective_sketches.odp">.odp sketch</a>)
+		  </figcaption>
+		</figure>
 
-	Similarly, the change in refractive index with wavelength is 
-	important for color correction, i.e the <em>dispersion</em>. The 
-	lens design 'expects' a particular dispersion, for example that of 
-	water or a particular oil. Dispersion is often (approximately) 
-	quantified with the <em>Abbe number</em> \(V_d\):
-	
-	\[V_d = \frac{n_d - 1}{n_F - n_C} \tag{2}\]
-	
-	where \(n_d\), \(n_F\) and \(n_C\) correspond to the refractive 
-	indices at the <em>Fraunhofer lines</em> at 587.56nm (yellow), 
-	486.13nm (blue) and 656.28nm (red) respectively 
-	(<a class="citation" href="https://www.pearson.com/en-us/subject-catalog/p/Hecht-Optics-5th-Edition/P200000006793/9780137526420" 
-	title="Optics, 5th edition; E. Hecht; 
-	p273, ISBN-13: 9780133977226, ISBN-13: 9780137526420 (eBook),
-	(2016)">Hecht 2016</a>). So lower values of \(V_d\) are <em>more</em>
-	dispersive and higher values are <em>less</em> dispersive. So, 
-	in general, we require that the dispersion of the immersion 
-	\(V_i\) and that of the sample \(V_s\) are equal:
-	
-	\[V_i = V_s \tag{3}\]
-	
-	</p>
-	
-	<figure>
-    <img src="figures/immersion_dispersion.png" alt="immersion_dispersion.png">
-    <figcaption>
-	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
-	</figcaption>
-	</figure>
-
-</section>
-</body>
+		<p>
+		Similarly, the change in refractive index with wavelength is 
+		important for color correction, i.e the <em>dispersion</em>. The 
+		lens design 'expects' a particular dispersion, for example that of 
+		water or a particular oil. Dispersion is often (approximately) 
+		quantified with the <em>Abbe number</em> \(V_d\):
+		
+		\[V_d = \frac{n_d - 1}{n_F - n_C} \tag{2}\]
+		
+		where \(n_d\), \(n_F\) and \(n_C\) correspond to the refractive 
+		indices at the <em>Fraunhofer lines</em> at 587.56nm (yellow), 
+		486.13nm (blue) and 656.28nm (red) respectively 
+		(<a class="citation" href="https://www.pearson.com/en-us/subject-catalog/p/Hecht-Optics-5th-Edition/P200000006793/9780137526420" 
+		title="Optics, 5th edition; E. Hecht; 
+		p273, ISBN-13: 9780133977226, ISBN-13: 9780137526420 (eBook),
+		(2016)">Hecht 2016</a>). So lower values of \(V_d\) are <em>more</em>
+		dispersive and higher values are <em>less</em> dispersive. So, 
+		in general, we require that the dispersion of the immersion 
+		\(V_i\) and that of the sample \(V_s\) are equal:
+		
+		\[V_i = V_s \tag{3}\]
+		</p>
+		
+		<figure>
+		  <img src="figures/immersion_dispersion.png" alt="immersion_dispersion.png">
+		  <figcaption>
+		  (<a href="figures/objective_sketches.odp">.odp sketch</a>)
+		  </figcaption>
+		</figure>
+	  </section>
+	</main>
+  </body>
 </html>

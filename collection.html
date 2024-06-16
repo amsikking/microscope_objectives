@@ -2,98 +2,109 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+  <head>
 	<meta charset="utf-8">
-	<title>Microscope objectives: Collection</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/prism.css">
     <script src="javascript/python-highlighting/prism.js"></script>
     <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
     <script src="javascript/update_figures.js"></script>
     <script src="javascript/reference_list/reference_list.js"></script>
-</head>
+	<title>amsikking: Collection</title>
+  </head>
 
-<body>
-<section>
-	<a href="https://amsikking.github.io/">Home page</a>
-	<h1>amsikking: Microscope objectives</h1>
-	<a href="./index.html">Index</a>
+  <body>
+  	<header>
+	  <nav>
+	    <ul>
+		  <li><h1 style="margin-top: 0rem; margin-left: 1rem; margin-right: 1rem">amsikking:</h1></li>
+		  <li><a href="https://amsikking.github.io/">Home page</a></li>
+		  <li><a href="https://github.com/amsikking/microscope_objectives">GitHub</a></li>
+	    </ul>
+	  </nav>
+	</header>
 
-	<h2>Collection</h2>
-	<p>
-	An ideal point emitter generates a spherical wave of uniform amplitude, with
-	total surface area (<a class="citation" 
-	href="https://www.cengage.com/c/calculus-10e-larson/9781285057095/" 
-	title="Calculus; R. Larson and B.H. Edwards; 
-	Revision 10, ISBN-13: 9781285057095, ISBN-13: 9780357690529 (eBook),
-	(2014)">Larson 2014</a>):
-	
-	\[ A_{sphere} = 4 \pi r^2 \tag{1}\]
-	
-	For an objective that respects a <em>planar boundary</em> (image plane) then
-	the maximum possible collection area \(A_{max}\) is the area of a 
-	<em>hemisphere</em>:
-	
-	\[ A_{max} = 2 \pi r^2 \tag{2}\]
-	
-	The actual area collected is of course limited by the collection half angle 
-	(\(\theta\)) to the area of a <em>spherical cap</em> 
-	(<a class="citation" 
-	href="https://books.google.com/books?id=ge6nk9W0BCcC&printsec=frontcover#v=onepage&q&f=false" 
-	title="Handbook of Mathematics for Engineers and Scientists; 
-	A. D. Polyanin and A. V. Manzhirov; 1st Edition, p69,
-	ISBN-13: 978-1584885023, ISBN-13: 978-1584885023 (eBook), (2006)">Polyanin 2006</a>):
-	
-	\[ A_{collection} = 2 \pi r^2(1 - \cos\theta) \tag{3}\]
-	
-	So the collection of an objective normalised to the hemispheric maximum is 
-	simply:
-	
-	\[ \frac{A_{collection}}{A_{max}} = 1 - \cos\theta \tag{4}\]
-	
-	If we rewrite (4) in terms of \(\sin\theta\):
-	
-	\[ \frac{A_{collection}}{A_{max}} = 
-	1 - (1 - \sin^2\theta)^\frac{1}{2} \tag{5}\]
-	
-	and now use the Taylor expansion of the form:
-	
-	\[ (1 - \sin^2\theta)^\frac{1}{2} = 
-	1 - \frac{1}{2} \sin^2\theta \; - \; ... \tag{6}\]
-	
-	then we can rewrite (5) as:
-	
-	\[ \frac{A_{collection}}{A_{max}} \approx \frac{1}{2} \sin^2\theta \tag{7}\]
-	
-	Or in terms of numerical aperture as:
-	
-	\[ \frac{A_{collection}}{A_{max}} \approx \frac{ NA^2}{2n^2} \tag{8}\]
-	
-	So all things being equal, the <em>brightness</em> of an image is
-	approximately proportional to the numerical aperture squared
-	(<a class="citation" href="https://doi.org/10.1007/978-0-387-45524-2" 
-	title="Handbook of Biological Confocal Microscopy, third edition;
-	J. Pawley; p25 , Springer US, ISBN 978-0-387-25921-5, 
-	eBook ISBN 978-0-387-45524-2, (2006)">Pawley 2006</a>):
-	
-	\[ brightness \propto NA^2 \tag{9}\]
-	
-	<strong>Note:</strong> the approximation by Taylor series to express
-	the brightness in terms of \(NA\) seems unnecessary given the elegance of
-	the \(1 - \cos\theta\) expression, and the approximation gets worse for
-	higher half angles (\(\theta\)). However, this simple treatment gives no
-	consideration to <em>reflection losses</em> throughout the many elements
-	that make a high \(NA\) objective, and the higher angle rays are the most
-	affected, which somewhat justifies the regular use and convenience of (9).
-	</p>
-	
-	<figure>
-    <img src="figures/collection.png" alt="collection.png">
-    <figcaption>
-	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
-	</figcaption>
-	</figure>
-
-</section>
-</body>
+	<main>
+	  <h1>Microscope objectives</h1>
+	  <p>An introduction to 'infinity' corrected microscope objectives.</p>
+	  <a href="./index.html">Contents</a>
+	  <section>
+		<h2>Collection</h2>
+		<p>
+		An ideal point emitter generates a spherical wave of uniform amplitude, with
+		total surface area (<a class="citation" 
+		href="https://www.cengage.com/c/calculus-10e-larson/9781285057095/" 
+		title="Calculus; R. Larson and B.H. Edwards; 
+		Revision 10, ISBN-13: 9781285057095, ISBN-13: 9780357690529 (eBook),
+		(2014)">Larson 2014</a>):
+		
+		\[ A_{sphere} = 4 \pi r^2 \tag{1}\]
+		
+		For an objective that respects a <em>planar boundary</em> (image plane) then
+		the maximum possible collection area \(A_{max}\) is the area of a 
+		<em>hemisphere</em>:
+		
+		\[ A_{max} = 2 \pi r^2 \tag{2}\]
+		
+		The actual area collected is of course limited by the collection half angle 
+		(\(\theta\)) to the area of a <em>spherical cap</em> 
+		(<a class="citation" 
+		href="https://books.google.com/books?id=ge6nk9W0BCcC&printsec=frontcover#v=onepage&q&f=false" 
+		title="Handbook of Mathematics for Engineers and Scientists; 
+		A. D. Polyanin and A. V. Manzhirov; 1st Edition, p69,
+		ISBN-13: 978-1584885023, ISBN-13: 978-1584885023 (eBook), (2006)">Polyanin 2006</a>):
+		
+		\[ A_{collection} = 2 \pi r^2(1 - \cos\theta) \tag{3}\]
+		
+		So the collection of an objective normalised to the hemispheric maximum is 
+		simply:
+		
+		\[ \frac{A_{collection}}{A_{max}} = 1 - \cos\theta \tag{4}\]
+		
+		If we rewrite (4) in terms of \(\sin\theta\):
+		
+		\[ \frac{A_{collection}}{A_{max}} = 
+		1 - (1 - \sin^2\theta)^\frac{1}{2} \tag{5}\]
+		
+		and now use the Taylor expansion of the form:
+		
+		\[ (1 - \sin^2\theta)^\frac{1}{2} = 
+		1 - \frac{1}{2} \sin^2\theta \; - \; ... \tag{6}\]
+		
+		then we can rewrite (5) as:
+		
+		\[ \frac{A_{collection}}{A_{max}} \approx \frac{1}{2} \sin^2\theta \tag{7}\]
+		
+		Or in terms of numerical aperture as:
+		
+		\[ \frac{A_{collection}}{A_{max}} \approx \frac{ NA^2}{2n^2} \tag{8}\]
+		
+		So all things being equal, the <em>brightness</em> of an image is
+		approximately proportional to the numerical aperture squared
+		(<a class="citation" href="https://doi.org/10.1007/978-0-387-45524-2" 
+		title="Handbook of Biological Confocal Microscopy, third edition;
+		J. Pawley; p25 , Springer US, ISBN 978-0-387-25921-5, 
+		eBook ISBN 978-0-387-45524-2, (2006)">Pawley 2006</a>):
+		
+		\[ brightness \propto NA^2 \tag{9}\]
+		
+		<strong>Note:</strong> the approximation by Taylor series to express
+		the brightness in terms of \(NA\) seems unnecessary given the elegance of
+		the \(1 - \cos\theta\) expression, and the approximation gets worse for
+		higher half angles (\(\theta\)). However, this simple treatment gives no
+		consideration to <em>reflection losses</em> throughout the many elements
+		that make a high \(NA\) objective, and the higher angle rays are the most
+		affected, which somewhat justifies the regular use and convenience of (9).
+		</p>
+		
+		<figure>
+		  <img src="figures/collection.png" alt="collection.png">
+		  <figcaption>
+		  (<a href="figures/objective_sketches.odp">.odp sketch</a>)
+		  </figcaption>
+		</figure>
+	  </section>
+	</main>
+  </body>
 </html>

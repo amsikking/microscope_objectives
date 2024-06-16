@@ -2,52 +2,63 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+  <head>
 	<meta charset="utf-8">
-	<title>Microscope objectives: Plan correction</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/prism.css">
     <script src="javascript/python-highlighting/prism.js"></script>
     <script async src="javascript/Minimal-MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
     <script src="javascript/update_figures.js"></script>
     <script src="javascript/reference_list/reference_list.js"></script>
-</head>
+	<title>amsikking: Plan correction</title>
+  </head>
 
-<body>
-<section>
-	<a href="https://amsikking.github.io/">Home page</a>
-	<h1>amsikking: Microscope objectives</h1>
-	<a href="./index.html">Index</a>
+  <body>
+  	<header>
+	  <nav>
+	    <ul>
+		  <li><h1 style="margin-top: 0rem; margin-left: 1rem; margin-right: 1rem">amsikking:</h1></li>
+		  <li><a href="https://amsikking.github.io/">Home page</a></li>
+		  <li><a href="https://github.com/amsikking/microscope_objectives">GitHub</a></li>
+	    </ul>
+	  </nav>
+	</header>
 
-	<h2>Plan correction</h2>
-	<p>
-	An ideal objective would image a totally <em>flat</em> plane and be fully 
-	'plan' corrected. In practice the lens design has to battle field curvature, 
-	which naturally occurs when a series of (mostly positive) elements are combined 
-	to make an objective 
-	(<a class="citation" href="https://www.pearson.com/en-us/subject-catalog/p/Hecht-Optics-5th-Edition/P200000006793/9780137526420" 
-	title="Optics, 5th edition; E. Hecht; 
-	p268, ISBN-13: 9780133977226, ISBN-13: 9780137526420 (eBook),
-	(2016)">Hecht 2016</a>). From <a class="citation" href="https://doi.org/10.1515/aot-2019-0002" 
-	title="Systematic design of microscope objectives. Part I: System review and analysis; Y. Zhang; 
-	p326, (2019)">Zhang 2019</a>, an objective can be considered 'plan' corrected
-	if, the difference \(C\) between the best focus at the field edge and the best 
-	axial focus, is less than 2.5x the <em>traditional depth of field</em>:
+	<main>
+	  <h1>Microscope objectives</h1>
+	  <p>An introduction to 'infinity' corrected microscope objectives.</p>
+	  <a href="./index.html">Contents</a>
+	  <section>
+		<h2>Plan correction</h2>
+		<p>
+		An ideal objective would image a totally <em>flat</em> plane and be fully 
+		'plan' corrected. In practice the lens design has to battle field curvature, 
+		which naturally occurs when a series of (mostly positive) elements are combined 
+		to make an objective 
+		(<a class="citation" href="https://www.pearson.com/en-us/subject-catalog/p/Hecht-Optics-5th-Edition/P200000006793/9780137526420" 
+		title="Optics, 5th edition; E. Hecht; 
+		p268, ISBN-13: 9780133977226, ISBN-13: 9780137526420 (eBook),
+		(2016)">Hecht 2016</a>). From <a class="citation" href="https://doi.org/10.1515/aot-2019-0002" 
+		title="Systematic design of microscope objectives. Part I: System review and analysis; Y. Zhang; 
+		p326, (2019)">Zhang 2019</a>, an objective can be considered 'plan' corrected
+		if, the difference \(C\) between the best focus at the field edge and the best 
+		axial focus, is less than 2.5x the <em>traditional depth of field</em>:
 
-	\[ C \leq 2.5 \frac{n\lambda}{NA^2} \tag{1}\]
-	
-	So for sensitive applications this could be considered quite a <em>loose</em>
-	tolerance, and therefore, the field curvature on a <em>non-plan</em> objective 
-	may be quite pronounced.
-	</p>
-	
-	<figure>
-    <img src="figures/plan_correction.png" alt="plan_correction.png">
-    <figcaption>
-	(<a href="figures/objective_sketches.odp">.odp sketch</a>)
-	</figcaption>
-	</figure>
-	
-</section>
-</body>
+		\[ C \leq 2.5 \frac{n\lambda}{NA^2} \tag{1}\]
+		
+		So for sensitive applications this could be considered quite a <em>loose</em>
+		tolerance, and therefore, the field curvature on a <em>non-plan</em> objective 
+		may be quite pronounced.
+		</p>
+		
+		<figure>
+		  <img src="figures/plan_correction.png" alt="plan_correction.png">
+		  <figcaption>
+		  (<a href="figures/objective_sketches.odp">.odp sketch</a>)
+		  </figcaption>
+		</figure>
+	  </section>
+	</main>
+  </body>
 </html>
