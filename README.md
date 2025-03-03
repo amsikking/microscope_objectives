@@ -7,4 +7,4 @@ An introduction to 'infinity' corrected microscope objectives: https://amsikking
 ![social_preview](https://github.com/amsikking/microscope_objectives/blob/main/social_preview.png)
 
 ## Acknowledgments:
-Inspired by, and with contributions from: [jdmanton](https://github.com/jdmanton).
+Inspired by, and with contributions from: [kmdouglass](https://github.com/kmdouglass) and [jdmanton](https://github.com/jdmanton).
