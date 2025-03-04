@@ -46,7 +46,8 @@
 		\[ \nu = \frac{n}{\lambda_0} \tag{2}\]
 		
 		where \(\lambda_0\) is the vacuum wavelength and \(n\) is the refractive index
-		of the medium.
+		of the medium. Here \(\nu\) is collected (or delivered) over the full angular 
+		range of the objective (twice the half angle \(\theta \)).
 		</p>
 		<p>
 		If we now accept that the back focal plane of an objective resides in reciprocal
@@ -54,15 +55,24 @@
 		correction) the back focal plane of the objective has the shape of a spherical 
 		cap, we can see from the diagram below that:
 		
-		\[ \nu_r = 2 \nu\sin\theta \tag{3}\]
+		\[ \nu_t = 2 \nu\sin\theta \tag{3}\]
 		
 		and,
 		
 		\[ \nu_z = \nu (1 - \cos\theta) \tag{4}\]
 		
-		where \(\nu_r\) and \(\nu_z\) are the highest spatial frequencies we can measure
-		in the radial and axial directions respectively, i.e. they are the 
+		where \(\nu_t\) and \(\nu_z\) are the highest spatial frequencies we can measure
+		in the transverse and axial directions respectively, i.e. they are the 
 		<em>band limit</em>.
+		</p>
+		<p>
+		<strong>Note:</strong> A way to understand the origin or meaning of \(\nu_t \) is
+		to consider plane waves. If \(\theta = 0^{\circ} \) we have only plane waves normal 
+		to the object plane and therefore no resolving power (i.e. \(\nu_t = 0 \)). If 
+		\(\theta = 90^{\circ} \) then we have counter propagating plane waves with twice the 
+		resolving power of a single wave (via wave superposition) and so \(\nu_t = 2\nu \). 
+		The intermediate case where \( 0^{\circ} \lt \theta \lt 90^{\circ} \) is relevant to 
+		a practical objective lens design (i.e. equation \((3) \)).
 		</p>
 		
 		<figure>
@@ -74,7 +84,7 @@
 		
 		<p>
 		We can now return to real space by rewriting (3) and (4)
-		in terms of the minimum feature size \(r_{min} = \frac{1}{\nu_r} \) and
+		in terms of the minimum feature size \(r_{min} = \frac{1}{\nu_t} \) and
 		\(z_{min} = \frac{1}{\nu_z} \):
 
 		\[ r_{min} = \frac{\lambda_0}{2 n \sin\theta} \tag{5}\]
