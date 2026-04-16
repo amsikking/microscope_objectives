@@ -1,6 +1,6 @@
 # microscope_objectives
 
-<a href="https://doi.org/10.5281/zenodo.14367635"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.14367635.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.14367635"><img src="https://img.shields.io/badge/DOI-10.5281/zenodo.14367635-blue.svg" alt="DOI"></a>
 
 An introduction to 'infinity' corrected microscope objectives: https://amsikking.github.io/microscope_objectives
 
